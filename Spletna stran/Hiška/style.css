@@ -64,6 +64,7 @@ nav.main .wrap{display:flex;align-items:center;justify-content:space-between;hei
   display:grid;place-items:center;
 }
 .logo .mark svg{width:20px;height:20px}
+.logo-text{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .navlinks{display:flex;gap:36px;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;color:var(--bone)}
 .navlinks a{position:relative;padding:6px 0;transition:color .2s}
 .navlinks a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--bone);transition:width .35s ease}
@@ -322,10 +323,14 @@ footer .sig{margin-top:18px;color:#9eaa97;font-size:14px;max-width:38ch}
   section.tight{padding:0}
 
   .topbar{display:none}
-  nav.main .wrap{height:auto;min-height:68px;padding-top:12px;padding-bottom:12px;gap:12px}
-  .logo{font-size:24px}
-  .logo .mark{width:34px;height:34px}
-  .nav-actions{gap:8px}
+  nav.main .wrap{height:auto;min-height:68px;padding-top:12px;padding-bottom:12px;gap:8px}
+  .logo{
+    min-width:0;flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;
+    font-size:18px;gap:8px;
+  }
+  .logo .mark{width:34px;height:34px;flex:0 0 34px}
+  .nav-actions{gap:8px;flex:0 0 auto}
+  .nav-lang{flex:0 0 auto}
 
   .hero{height:auto;min-height:calc(100svh - 68px)}
   .hero img.bg{object-position:center}
